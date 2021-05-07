@@ -1,0 +1,219 @@
+@import "_reset.scss";
+$inner-width: 1200px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    width:100%;
+    .header{
+        width:100%;
+        height:100px;
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:999;
+        .inner{
+            max-width:1400px;
+            height:100%;
+            margin:0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1{
+            
+            }
+            ul{
+                display: flex;
+                li{
+                    a{
+                        text-decoration: none;
+                        font-size:12px;
+                        font-weight:600;
+                        color:#848484;
+                        padding:0 20px;
+                    }
+                }
+            }
+        }
+    }
+    .section01{
+        width:100%;
+        height:670px;
+        background: #e9e9e9;
+        position:relative;
+        .right-content{
+            position:absolute;
+            top:200px;
+            right:300px;
+            width:480px;
+            h2{
+                font-size:38px;
+                font-weight:500;
+                margin-bottom:30px;
+            }
+            p{
+                font-size:18px;
+                line-height:25px;
+                color:#787878;
+                margin-bottom:30px;
+            }
+            a{
+                width:180px;
+                height:55px;
+                background: #10c9c3;
+                display: flex;  // 왜 flex를 쓰는가?
+                justify-content: center;
+                align-items: center;
+                color:#fff;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .section02{
+        width:100%;
+        height:420px;
+        
+        .about-us{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size:30px;
+                margin:100px 0 40px;
+            }
+            p{
+                width:600px;
+                font-size: 15px;
+                text-align: center;
+                color:#787878;
+                line-height:25px;
+                margin-bottom:40px;
+            }
+        }
+    }
+
+    .section03{
+        width:100%;
+        height:810px;
+        .top-skills{
+            height:570px;
+            display: flex;
+            .left-skill{
+                width:50%;
+                background:#f8f9f9;
+                padding:160px 100px;
+                box-sizing: border-box;
+                h2{
+                    font-size:30px;
+                    font-weight:500;
+                    margin-bottom:30px;
+                }
+                p{
+                    font-size:14px;
+                    margin-bottom:20px;
+                }
+                .progress-wrap{
+                    width:500px;
+                    height:5px;
+                    background:#d8d8d8;
+                    margin-bottom:20px;
+                    .design{
+                        width:75%;
+                        height:100%;
+                        background:#10c9c3;
+                    }
+                    .devel{
+                        width:90%;
+                        height:100%;
+                        background: #10c9c3;
+                    }
+                    .market{
+                        width:65%;
+                        height:100%;
+                        background: #10c9c3;
+                    }
+                }
+            }
+            .right-skill{
+                width:50%;
+                height:570px;
+                background: #e9e9e9;
+            }
+        }
+        .bottom-skills{ // 양옆을 header와 같은크기로 하려면 section안에 inner 크기?
+            width:100%;
+            height:240px;
+            background:#10c9c3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon{
+                width:300px;
+                height:40px;
+                display: flex;
+                align-items: center;
+                img{
+                    width:40px;
+                    padding-right:28px;
+                }
+                p{
+                    color:#fff;
+                    font-size:16px;
+                    font-weight:500;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+    .section04{
+        width:100%;
+        height:700px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 300px) 100px;
+        .box04:nth-child(even){
+            background: #dddddd;
+        }
+        .box04:nth-child(odd){
+            background: #838383;
+        }
+        .load{ //안에 텍스트 p로 감싸야하나? 
+            width:100%;
+            background: #f5f5f5;
+            grid-column: 1/5;
+            grid-row:3/4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:12px;
+            font-weight:500;
+            text-transform: uppercase;
+        }
+    }
+
+    button {
+        box-sizing: content-box;
+    }
+
+    .section05{
+        width:100%;
+        height:930px;
+        h2{
+            font-size:30px;
+        }
+        .video{
+
+        }
+    }
+
+    .section06{
+
+    }
+}
